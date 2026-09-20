@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: garba-connect-api
+  datasource:
+    url: jdbc:postgresql://localhost:5433/garbaconnect
+    username: garba
+    password: garba
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+jwt:
+  secret: your-super-secret-key-minimum-32-characters-long
+  access-token-expiration: 900000
+  refresh-token-expiration: 604800000
+file:
+  upload-dir: uploads/profile-images

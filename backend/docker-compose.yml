@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: garba-postgres
+    environment:
+      POSTGRES_DB: garbaconnect
+      POSTGRES_USER: garba
+      POSTGRES_PASSWORD: garba
+    ports:
+      - "5433:5432"
+    volumes:
+      - garba_pg_data:/var/lib/postgresql/data
+
+volumes:
+  garba_pg_data:
