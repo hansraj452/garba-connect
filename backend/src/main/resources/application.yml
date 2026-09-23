@@ -2,7 +2,7 @@ spring:
   application:
     name: garba-connect-api
   datasource:
-    url: jdbc:postgresql://localhost:5433/garbaconnect
+    url: jdbc:postgresql://0.0.0.0:5433/garbaconnect
     username: garba
     password: garba
   jpa:
